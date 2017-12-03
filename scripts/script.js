@@ -1,12 +1,9 @@
 var list = document.getElementById('list');
 var add = document.getElementById('addElem');
-var i=1;
 add.addEventListener('click', function() {
+	var i=document.getElementsByTagName('li').length;
 	var element = document.createElement('li');
-	element.innerHTML = 'item ';
-	element.innerHTML += i;
-	i++;
-	//wydaje mi się, że tak jest łatwiej niż używając getElementsByTagName.length
+	element.innerHTML = 'item '+i;
 	list.appendChild(element);
 }
 );
